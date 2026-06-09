@@ -1,4 +1,4 @@
-# pbar
+# prs_bar
 
 シンプルで使いやすいCLIプログレスバーライブラリ。
 
@@ -7,8 +7,7 @@
 ## インストール
 
 ```bash
-cd pbar_library
-pip install -e .
+pip install prs_bar
 ```
 
 ---
@@ -17,7 +16,7 @@ pip install -e .
 
 ```python
 import time
-from pbar import ProgressBar
+from prs_bar import ProgressBar
 
 with ProgressBar(100, prefix="処理中") as bar:
     for i in range(100):
@@ -45,7 +44,7 @@ with ProgressBar(100, prefix="処理中") as bar:
 
 ```python
 import time
-from pbar import ProgressBar
+from prs_bar import ProgressBar
 
 # with文（推奨）
 with ProgressBar(100, prefix="処理中", suffix="完了") as bar:
@@ -95,7 +94,7 @@ with ProgressBar(100, prefix="ダウンロード", show_elapsed=True, show_eta=T
 
 ```python
 import time
-from pbar import track
+from prs_bar import track
 
 items = list(range(100))
 
@@ -125,7 +124,7 @@ for item in track(items, prefix="処理中", color="green"):
 
 ```python
 import time
-from pbar import Spinner
+from prs_bar import Spinner
 
 with Spinner("データを取得中", style="dots", color="cyan"):
     time.sleep(3)
@@ -161,7 +160,7 @@ with Spinner("データを取得中", style="dots", color="cyan"):
 
 ```python
 import time
-from pbar import MultiBar
+from prs_bar import MultiBar
 
 with MultiBar() as mb:
     bar_a = mb.add(100, prefix="ダウンロード", color="cyan")
@@ -204,7 +203,7 @@ with MultiBar() as mb:
 | `BarStyle.blocks()` | `|■■■□□□|` |
 
 ```python
-from pbar import ProgressBar, BarStyle
+from prs_bar import ProgressBar, BarStyle
 
 with ProgressBar(100, style=BarStyle.arrow(), color="green") as bar:
     ...
@@ -213,7 +212,7 @@ with ProgressBar(100, style=BarStyle.arrow(), color="green") as bar:
 ### カスタムスタイル
 
 ```python
-from pbar import BarStyle
+from prs_bar import BarStyle
 
 my_style = BarStyle(
     fill="▶",
@@ -255,10 +254,10 @@ my_style = BarStyle(
 ## ファイル構成
 
 ```
-pbar_library/
+prs_bar_library/
 ├── setup.py
 ├── pyproject.toml
-└── pbar/
+└── prs_bar/
     ├── __init__.py       # 全クラスをまとめてエクスポート
     ├── style.py          # BarStyle・カラー・スピナーフレーム定義
     ├── progressbar.py    # ProgressBar クラス
@@ -272,9 +271,9 @@ pbar_library/
 ## import まとめ
 
 ```python
-from pbar import ProgressBar   # 基本バー
-from pbar import track          # イテラブル自動ラップ
-from pbar import Spinner        # スピナー
-from pbar import MultiBar       # 複数バー同時表示
-from pbar import BarStyle       # スタイル指定
+from prs_bar import ProgressBar   # 基本バー
+from prs_bar import track          # イテラブル自動ラップ
+from prs_bar import Spinner        # スピナー
+from prs_bar import MultiBar       # 複数バー同時表示
+from prs_bar import BarStyle       # スタイル指定
 ```

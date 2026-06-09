@@ -1,8 +1,0 @@
-pyproject.toml
-setup.py
-pbar/__init__.py
-pbar/bar.py
-pbar.egg-info/PKG-INFO
-pbar.egg-info/SOURCES.txt
-pbar.egg-info/dependency_links.txt
-pbar.egg-info/top_level.txt

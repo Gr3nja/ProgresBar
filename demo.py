@@ -1,12 +1,16 @@
+"""
+prs_bar ライブラリのデモスクリプト
+"""
 import sys
 import time
 
 sys.path.insert(0, ".")
 
-from pbar import ProgressBar, BarStyle, Spinner, MultiBar, track
+from prs_bar import ProgressBar, BarStyle, Spinner, MultiBar, track
 
 TOTAL = 40
 SLEEP = 0.03
+
 
 def demo_basic():
     print("━━ デモ1: 基本的な使い方 (ProgressBar) ━━")
@@ -100,4 +104,4 @@ if __name__ == "__main__":
     demo_spinner()
     demo_step()
     demo_multibar()
-    print("\n完了しました。")
+    print("\n✅ 全デモ完了！")
