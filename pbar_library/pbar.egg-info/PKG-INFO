@@ -1,0 +1,6 @@
+Metadata-Version: 2.4
+Name: pbar
+Version: 0.1.0
+Summary: シンプルで使いやすいCLIプログレスバーライブラリ
+Requires-Python: >=3.8
+Dynamic: requires-python
